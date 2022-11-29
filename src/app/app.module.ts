@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { PassengerAPIComponent } from './passenger-api/passenger-api.component';
 import { UsDataAPIComponent } from './us-data-api/us-data-api.component';
 import { UserInfoApiComponent } from './user-info-api/user-info-api.component';
+import { ShoppingApiComponent } from './shopping-api/shopping-api.component';
 
 const myRoute: Routes=[
   {path:"",
@@ -17,6 +18,9 @@ const myRoute: Routes=[
   },
   {path:"userdata",
   component:UserInfoApiComponent
+  },
+  {path:"shop",
+  component:ShoppingApiComponent
   }]
 
 
@@ -25,7 +29,8 @@ const myRoute: Routes=[
     AppComponent,
     PassengerAPIComponent,
     UsDataAPIComponent,
-    UserInfoApiComponent
+    UserInfoApiComponent,
+    ShoppingApiComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,55 @@
+<h1 class="display-4 text-center">Shopping</h1>   
+<p> </p>
+<p> </p>
+<div class="row">
+    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">     
+        <div class="row g-3">
+<!-- ------------------------------------------------------------------------------------------------             -->
+            
+            <div class="col col-sm-12 col-md-4 col-lg-4 col-xl-3 col-xxl-3" *ngFor="let i of sdata.products">
+                <div class="card text-black" style="height:600px;">
+                    <i class="fab fa-apple fa-lg"></i>
+                    <img src="{{i.thumbnail}}" class="card-img-top" style="min-height:300px; ">
+                    <div class="row mt-1">
+                        <div class="col"><img src="{{i.images[0]}}" class="card-img-top" style="max-height:40px;"></div>
+                        <div class="col"><img src="{{i.images[1]}}" class="card-img-top" style="max-height:40px;"></div>
+                        <div class="col"><img src="{{i.images[2]}}" class="card-img-top" style="max-height:40px;"></div>
+                        <div class="col"><img src="{{i.images[3]}}" class="card-img-top" style="max-height:40px;"></div>
+                        <div class="col"><img src="{{i.images[4]}}" class="card-img-top" style="max-height:40px;"></div>
+
+                    </div>
+                      <div class="card-body" style="min-height:300px;">
+                        <div class="text-center">
+                            <h5 class="card-title">{{i.title}}</h5>
+                            <p class="text-muted mb-4 text-truncate" style="max-width: 400px;">{{i.description}}</p>
+                        </div>
+                        <div>
+                            <div class="text-center">
+                            <span>Category : {{i.category}}</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                            <span>Price:</span><span>${{i.price}}</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                            <span>Discount:</span><span>{{i.discountPercentage}}%</span>
+                            </div>
+                             <div class="d-flex justify-content-between">
+                            <span>Rating:</span><span>({{i.rating}}/5)</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                            <span>Stock:{{i.stock}}</span><span>Brand:{{i.brand}}</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            
+<!-- -------------------------------------------------------------- -->
+        </div>
+    </div>
+</div>      
+      
+      
+
