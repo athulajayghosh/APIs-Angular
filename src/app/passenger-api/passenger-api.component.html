@@ -7,18 +7,21 @@
         <div class="row g-3">
 
             <div *ngFor="let i of Pdata.data" class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                <div class="card border-dark" style="height: 450px;" >
+                <div class="card border-dark" style="height: 350px;" >
                     <img src="{{i.airline[0].logo}}" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Name:  {{i.name}}</h5>
                         <h6 class="card-title">Trips:  {{i.trips}}</h6>
-                        <p class="card-text">Airline Details:</p>
-                        <p class="card-text">Name: {{i.airline[0].name}}</p>
-                        <p class="card-text">Country: {{i.airline[0].country}}</p>
-                        <p class="card-text">Slogan: {{i.airline[0].slogan}}</p>
-                        <p class="card-text">Hq: {{i.airline[0].name}}</p>
-                        <p class="card-text">Wensite: {{i.airline[0].name}}</p>
-                        
+                        <p></p>
+                        <h6 class="card-text">Airline Details:</h6>
+                        <ul>
+
+                            <li class="card-text">Name: {{i.airline[0].name}}</li>
+                            <li class="card-text">Country: {{i.airline[0].country}}</li>
+                            <li class="card-text">Slogan: {{i.airline[0].slogan}}</li>
+                            <li class="card-text">Hq: {{i.airline[0].name}}</li>
+                            <li class="card-text">Wensite: {{i.airline[0].name}}</li>
+                        </ul>
                     </div>
                   </div>
             </div>     
