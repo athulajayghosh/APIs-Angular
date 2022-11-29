@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,7 @@ import { PassengerAPIComponent } from './passenger-api/passenger-api.component';
 import { UsDataAPIComponent } from './us-data-api/us-data-api.component';
 import { UserInfoApiComponent } from './user-info-api/user-info-api.component';
 import { ShoppingApiComponent } from './shopping-api/shopping-api.component';
+import { NavComponent } from './nav/nav.component';
 
 const myRoute: Routes=[
   {path:"",
@@ -30,12 +32,14 @@ const myRoute: Routes=[
     PassengerAPIComponent,
     UsDataAPIComponent,
     UserInfoApiComponent,
-    ShoppingApiComponent
+    ShoppingApiComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(myRoute)
+    RouterModule.forRoot(myRoute),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
